@@ -1,0 +1,12 @@
+.gvideos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.gaminggg{
+    display: flex;
+    background: rgb(226, 224, 224);
+    margin:10px;
+}

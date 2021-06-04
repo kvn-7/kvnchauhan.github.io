@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="homepagestyles.css">
+    <link rel="stylesheet" href="aboutmestyles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>About Kvn</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">.KvN</a></div>
+            <label for="btn" class="burger">
+                <span class="fa fa-bars "></span>
+            </label>
+            <input class="burgercheck" type="checkbox" id="btn">
+            <ul class="navlist">
+                <li><a href="/" class="home ex">Home</a></li>
+                <li><a href="aboutme.html" class="ex">About Me</a></li>
+                <li>
+                    <label for="btn-1" class="show">Gallery +</label>
+                    <a href="#" class="ex">Gallery</a>
+                    <input class="gallerybtn" type="checkbox" id="btn-1">
+                    <ul class="subnavlist">
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="itsme.html">ItsMe</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactme.html" class="cntme ex">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="aboutmemain">
+        <div class="front">
+            <h2>Kevin Chauhan</h2>
+            <h3>IT-Developer</h3>
+            <h4>DOB: 22 NOV,2002</h4>
+        </div>
+        <div class="abtmain">
+            <div class="box1 himself" data-aos="zoom-in-right">
+                <h2>Him Self</h2>
+                <p>Hello!! Kvn is a developer, designer, coder and gamer and person living in Gujarat, India. Knowing
+                    person
+                    for his speediness and logic building. Still, He is being learned all the time for improving his
+                    skills, Holding a good Communication
+                    skill. He is fueled by his passion to achieve what he wants. As believing in "BE THE ONE" ,Eager to
+                    do such a kind of things which make him unique.
+                </p>
+            </div>
+            <div class="box2 hisskills" data-aos="zoom-in-left">
+                <h2>Skills</h2>
+                <p>He has many impressive skills, As he is a very fast learner. He has knowledge of many programming
+                    languages like HTML, CSS, JAVASCRIPT, PHP, MYSQL, C, CPP, JAVA, MONGODB, NODEJS, REACTJS, LARAVEL
+                    and still he
+                    is learning android studio and shopify to improve his criteria. He has amazing Creativity for
+                    designing website or apps. Swiftness is a key while he works on any projects. He has over powered
+                    logics all the time. These types of skills make him unique.</p>
+            </div>
+            <div class="box1 studies" data-aos="zoom-in-right">
+                <h2>Studies</h2>
+                <p>He belongs to Rajkot, a city of Gujarat. He has completed his school studies at Sarvodaya
+                    school, Rajkot. He is studying in DHARMSINH DESAI UNIVERSITY, NADIAD in Computer Engineering branch
+                    for
+                    his becholer's degree. He is very bright at studies. He came board 6th in 10th board exams and done
+                    very well in his 12th also and has been aligible to study at DDU. His first priority is his parents'
+                    smile, He makes tremendous efforts to fullfill it.</p>
+            </div>
+            <div class="box2 hobbies" data-aos="zoom-in-left">
+                <h2>Hobbies</h2>
+                <p>In his spare time, He loves to do gaming. Gaming is a kind of thing which makes him fresh. He wants
+                    to
+                    be a professional Esports player also at Battelgrounds Mobile India. He is a kind of pro at this
+                    game. Gaming add up some kind of IT knowledge in to him. It helps him to increase his Creativity
+                    skills. He has a youtube channel also on which he uploads his gaming videos.
+                </p>
+            </div>
+            <div class="box1 Goals" data-aos="zoom-in-right">
+                <h2>Goals</h2>
+                <p>A believer of excellence, having the zeal to up-skill, being efficient & productive for the company &
+                    develop as well as diversify his professional skill-set. Looking forward to working as a software
+                    developer in a Multinational Corporation to get exposure to international clients. Offering
+                    excellence in communication skills with team spirit and expertise in computer tech languages like C,
+                    C++, JAVASCRIPT, HTML, PHP & MYSQL.Also his dream to be a professional E-sports player for an
+                    international organization and represent india over international events.</p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <h3> Copy right © kvnchauhan.com 2021 || All rights resereved</h3>
+    </footer>
+    <script src="https://kit.fontawesome.com/188c1968d2.js" crossorigin="anonymous"></script>
+    <script>
+        $('.burger').click(function () {
+            $('.fa-bars').toggleClass("cancel");
+        });
+    </script>
+    <script>
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('.ex');
+        const menuLength = menuItem.length;
+        var count=0;
+        for (let i = 0; i < menuLength; i++) {
+            if (menuItem[i].href === currentLocation) {
+                var element, name, arr;
+                element = menuItem[i];
+                name = "active";
+                arr = element.className.split(" ");
+                if (arr.indexOf(name) == -1) {
+                    element.className += " " + name;
+                }
+                count++;
+            }
+        }
+        if(count==0)
+        {
+            var element, name, arr;
+                element = menuItem[2];
+                name = "active";
+                arr = element.className.split(" ");
+                if (arr.indexOf(name) == -1) {
+                    element.className += " " + name;
+                }
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                offset: 250,
+                duration: 1000,
+            }
+        );
+    </script>
+</body>
+
+</html>

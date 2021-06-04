@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://kit.fontawesome.com/188c1968d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="homepagestyles.css">
+    <link rel="stylesheet" href="contactmestyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo"><a href="#">.KvN</a></div>
+                <label for="btn" class="burger">
+                    <span class="fa fa-bars "></span>
+                </label>
+                <input class="burgercheck" type="checkbox" id="btn">
+                <ul class="navlist">
+                    <li><a href="/" class="home ex">Home</a></li>
+                    <li><a href="aboutme.html" class="ex">About Me</a></li>
+                    <li>
+                        <label for="btn-1" class="show">Gallery +</label>
+                        <a href="#" class="ex">Gallery</a>
+                        <input class="gallerybtn" type="checkbox" id="btn-1">
+                        <ul class="subnavlist">
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="gaming.html">Gaming</a></li>
+                            <li><a href="itsme.html">ItsMe</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contactme.html" class="cntme ex">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="contactme" id="contactme"  data-aos="zoom-in">
+            <div class="containercnt">
+                <div class="cntinfo">
+                    <div>
+                        <h2>Contact Info</h2>
+                        <ul class="infoul">
+                            <li>
+                                <span>
+                                    <img src="location.png">
+                                </span>
+                                <span>Rajkot<br>
+                                    Gujarat,India
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="mail.png">
+                                </span>
+                                <span>kevinrajput7777@gmail.com</span>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="call.png">
+                                </span>
+                                <span>+91-9664575104</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="sm">
+                        <li><a href="instagram.com"><img src="3.png"></a></li>
+                        <li><a href="#"><img src="2.png"></a></li>
+                        <li><a href="#"><img src="5.png"></a></li>
+
+                    </ul>
+                </div>
+                <div class="cntform">
+                    <h2>Send a Massage</h2>
+                    <div class="formbox">
+                        <div class="inputbox w50">
+                            <input type="text" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputbox w50">
+                            <input type="text" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputbox w50">
+                            <input type="email" required>
+                            <span>Email Adress</span>
+                        </div>
+                        <div class="inputbox w50">
+                            <input type="text" required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputbox w100">
+                            <textarea required></textarea>
+                            <span>Write your massage here</span>
+                        </div>
+                        <div class="inputbox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h3> Copy right © kvnchauhan.com 2021 || All rights resereved</h3>
+        </footer>
+</body>
+<script>
+    const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('.ex');
+        const menuLength = menuItem.length;
+        var count=0;
+        for (let i = 0; i < menuLength; i++) {
+            if (menuItem[i].href === currentLocation) {
+                var element, name, arr;
+                element = menuItem[i];
+                name = "active";
+                arr = element.className.split(" ");
+                if (arr.indexOf(name) == -1) {
+                    element.className += " " + name;
+                }
+                count++;
+            }
+        }
+        if(count==0)
+        {
+            var element, name, arr;
+                element = menuItem[2];
+                name = "active";
+                arr = element.className.split(" ");
+                if (arr.indexOf(name) == -1) {
+                    element.className += " " + name;
+                }
+        }
+</script>
+<script src="https://kit.fontawesome.com/188c1968d2.js" crossorigin="anonymous"></script>
+<script>
+    $('.burger').click(function () {
+        $('.fa-bars').toggleClass("cancel");
+    });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                offset: 250,
+                duration: 1000,
+            }
+        );
+    </script>
+</html>

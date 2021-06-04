@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="portfoliostyles.css">
+    <link rel="stylesheet" href="homepagestyles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">.KvN</a></div>
+            <label for="btn" class="burger">
+                <span class="fa fa-bars "></span>
+            </label>
+            <input class="burgercheck" type="checkbox" id="btn">
+            <ul class="navlist">
+                <li><a href="/" class="home ex">Home</a></li>
+                <li><a href="aboutme.html" class="ex">About Me</a></li>
+                <li>
+                    <label for="btn-1" class="show">Gallery +</label>
+                    <a href="#" class="ex">Gallery</a>
+                    <input class="gallerybtn" type="checkbox" id="btn-1">
+                    <ul class="subnavlist">
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="itsme.html">ItsMe</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactme.html" class="cntme ex">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="portfolio">
+        <ul>
+            <li class="list pactive" data-filter="all">All</li>
+            <li class="list" data-filter="webdesigning">Web Designing</li>
+            <li class="list" data-filter="webdevelopement">Web developement</li>
+            <li class="list" data-filter="wordpress">Wordpress</li>
+        </ul>
+        <div class="main" data-aos="zoom-in-right">
+            <div class="itembox" data-item="webdevelopement"><a href="ayzcellphonesite.html"><img src="ayzcellphone.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+            <div class="itembox" data-item="wordpress"><a href="playersamsite.html"><img src="playersam.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+            <div class="itembox" data-item="webdesigning"><a href="pp-pandyasite.html"><img src="pp-pandya.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+            <div class="itembox" data-item="webdesigning"><a href="stlgrillzsite.html"><img src="stlgrillz.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+            <div class="itembox" data-item="wordpress"><a href="trackersite.html"><img src="tracker.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+            <div class="itembox" data-item="webdevelopement"><a href="gcsecuritysite.html"><img src="gcsecurity.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+            <div class="itembox" data-item="webdevelopement"><a href="atlanticbayresortsite.html"><img src="atlanticbayresort.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+            <div class="itembox" data-item="wordpress"><a href="vipfunctionssite.html"><img src="vipfunctions.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+            <div class="itembox" data-item="webdesigning"><a href="neutralzsite.html"><img src="neutralz.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+            <div class="itembox" data-item="webdesigning"><a href="wethepeoplektsite.html"><img src="wethepeoplekt.png"><div class="cont"><h3 class="click">Click here to Visit Demosite</h3></div></a></div>
+        </div>
+    </section>
+    <footer>
+        <h3> Copy right © kvnchauhan.com 2021 || All rights resereved</h3>
+    </footer>
+    <script>
+        let list=document.querySelectorAll('.list');
+        let itembox=document.querySelectorAll('.itembox');
+
+        for(let i=0;i<list.length;i++){
+            list[i].addEventListener('click',function(){
+                for(let j=0;j<list.length;j++){
+                    list[j].classList.remove('pactive');
+                }
+                this.classList.add('pactive');
+                let datafilter=this.getAttribute('data-filter');
+                for(let k=0;k<itembox.length;k++){
+                    itembox[k].classList.remove('show');
+                    itembox[k].classList.add('hide');
+
+                    if(itembox[k].getAttribute('data-item')==datafilter || datafilter=="all"){
+                        itembox[k].classList.remove('hide');
+                        itembox[k].classList.add('show');
+                    }
+                }
+            })
+        }
+    </script>
+     <script>
+        $('.burger').click(function () {
+            $('.fa-bars').toggleClass("cancel");
+        });
+    </script>
+    <script>
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('.ex');
+        const menuLength = menuItem.length;
+        var count=0;
+        for (let i = 0; i < menuLength; i++) {
+            if (menuItem[i].href === currentLocation) {
+                var element, name, arr;
+                element = menuItem[i];
+                name = "active";
+                arr = element.className.split(" ");
+                if (arr.indexOf(name) == -1) {
+                    element.className += " " + name;
+                }
+                count++;
+            }
+        }
+        if(count==0)
+        {
+            var element, name, arr;
+                element = menuItem[2];
+                name = "active";
+                arr = element.className.split(" ");
+                if (arr.indexOf(name) == -1) {
+                    element.className += " " + name;
+                }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/188c1968d2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                offset: 250,
+                duration: 1000,
+            }
+        );
+    </script>
+</body>
+</html>

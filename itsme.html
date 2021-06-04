@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="homepagestyles.css">
+    <link rel="stylesheet" href="itsmestyles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Itsme</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">.KvN</a></div>
+            <label for="btn" class="burger">
+                <span class="fa fa-bars "></span>
+            </label>
+            <input class="burgercheck" type="checkbox" id="btn">
+            <ul class="navlist">
+                <li><a href="/" class="home ex">Home</a></li>
+                <li><a href="aboutme.html" class="ex">About Me</a></li>
+                <li>
+                    <label for="btn-1" class="show">Gallery +</label>
+                    <a href="#" class="ex">Gallery</a>
+                    <input class="gallerybtn" type="checkbox" id="btn-1">
+                    <ul class="subnavlist">
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="itsme.html">ItsMe</a></li>
+                    </ul>
+                </li>
+                <li><a href="contactme.html" class="cntme ex">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="itsmemain">
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn3.jpg" height="400px" width="280px">
+        </div>
+        
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn2.jpg" height="250px" width="450px">
+        </div>
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn15.jpg" height="400px" width="280px">
+        </div>
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn5.jpg" height="380px" width="300px">
+        </div>
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn7.jpg" height="400px" width="230px">
+        </div>
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn16.jpg" height="350px" width="220px">
+        </div>
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn8.jpg" height="350px" width="350px">
+        </div>
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn10.jpg" height="400px" width="300px">
+        </div>
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn11.jpg" height="300px" width="450px">
+        </div>
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn12.jpg" height="450px" width="400px">
+        </div>
+        <div class="mebox" data-aos="zoom-in">
+            <img src="kvn1.jpg" height="350px" width="220px">
+        </div>
+    </section>
+    <footer>
+        <h3> Copy right © kvnchauhan.com 2021 || All rights resereved</h3>
+    </footer>
+    <script src="https://kit.fontawesome.com/188c1968d2.js" crossorigin="anonymous"></script>
+    <script>
+        $('.burger').click(function () {
+            $('.fa-bars').toggleClass("cancel");
+        });
+    </script>
+    <script>
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('.ex');
+        const menuLength = menuItem.length;
+        var count=0;
+        for (let i = 0; i < menuLength; i++) {
+            if (menuItem[i].href === currentLocation) {
+                var element, name, arr;
+                element = menuItem[i];
+                name = "active";
+                arr = element.className.split(" ");
+                if (arr.indexOf(name) == -1) {
+                    element.className += " " + name;
+                }
+                count++;
+            }
+        }
+        if(count==0)
+        {
+            var element, name, arr;
+                element = menuItem[2];
+                name = "active";
+                arr = element.className.split(" ");
+                if (arr.indexOf(name) == -1) {
+                    element.className += " " + name;
+                }
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                offset: 250,
+                duration: 1000,
+            }
+        );
+    </script>
+</body>
+</html>

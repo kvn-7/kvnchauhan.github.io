@@ -1,0 +1,78 @@
+.aboutmemain {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  border-top: 2px solid black;
+  background: #35758f;
+  color:white;
+}
+.front {
+  margin-left: 87px;
+  margin-top: 20px;
+}
+.front h2 {
+  padding: 3px;
+  font-size: 33px;
+  font-family: 'Merienda', cursive;
+}
+.front h3 {
+  padding: 3px;
+  font-weight: 400;
+  font-family: 'Comic Neue', cursive;
+}
+.front h4{
+    font-weight: 400;
+  font-family: 'Comic Neue', cursive;
+}
+.box1{
+    border-right:1.5px solid black;
+    border-bottom:1px solid black;
+    margin-right:-1.5px;
+}
+.box2{
+    border-left:1.5px solid black;
+    border-bottom:1px solid black;
+}
+.Goals{
+    border-left:1.5px solid black;
+    margin-top:10px;
+}
+.box1,
+.box2 {
+  width: 49%;
+}
+.box1 p,
+.box2 p {
+  text-align: justify;
+  word-wrap: break-word;
+  padding:20px;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: 'Comic Neue', cursive;
+}
+.box1 h2,.box2 h2{
+    padding-left:20px;
+  font-family: 'Merienda', cursive;
+}
+.abtmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin:60px;
+  overflow: hidden;
+}
+@media all and (max-width: 1328px) {
+  .box1,
+  .box2 {
+    width: 100%;
+    border:none;
+    border-top: 1px solid black;
+  padding-top:10px;
+
+  }
+  .abtmain{
+      margin:10px;
+  }
+}
